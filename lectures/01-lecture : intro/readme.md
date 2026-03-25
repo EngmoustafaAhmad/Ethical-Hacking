@@ -105,6 +105,7 @@ Attack = Motive + Method + Vulnerability
 
 * من داخل المؤسسة
 * مثال: موظف يسرق بيانات
+* Examples: Theft of physical devices, keyloggers, backdoors, malware.
 
 ## 📦 Distribution Attacks
 
