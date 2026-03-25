@@ -81,7 +81,7 @@ Attack = Motive + Method + Vulnerability
 ## 🔎 Passive Attacks
 
 * مراقبة فقط بدون تعديل
-* مثال: Sniffing
+* مثال: eavesdropping  ,  Sniffing
 
 ## 💥 Active Attacks
 
