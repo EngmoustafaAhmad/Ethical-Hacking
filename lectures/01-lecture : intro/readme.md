@@ -99,6 +99,7 @@ Attack = Motive + Method + Vulnerability
 
   * Social Engineering
   * Shoulder Surfing
+  * dumpster diving
 
 ## 🏢 Insider Attacks
 
