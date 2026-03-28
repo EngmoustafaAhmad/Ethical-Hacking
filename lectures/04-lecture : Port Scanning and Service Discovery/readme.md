@@ -1,4 +1,4 @@
-# 🛡️ Ethical Hacking Lab – Lecture 4 (README)
+# 🛡️ Ethical Hacking Lab – Lecture 4 
 
 ## 📌 Overview
 
