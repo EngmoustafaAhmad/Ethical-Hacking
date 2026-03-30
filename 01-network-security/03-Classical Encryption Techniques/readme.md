@@ -250,11 +250,221 @@ Classical ciphers are the foundation of:
 
 ---
 
+# 🔐 Stream Ciphers
+
+## 📘 Overview
+
+This section covers **Stream Ciphers**, one of the main types of symmetric encryption. It explains how they work, random number generation, One-Time Pad (OTP), and Linear Feedback Shift Registers (LFSRs).
+
+---
+
+## 🔹 1. What is a Stream Cipher?
+
+* Encrypts **one bit at a time**
+* Uses a **keystream** (random-like sequence)
+* Fast and lightweight
+
+### ⚡ مقارنة:
+
+| Feature    | Stream Cipher    | Block Cipher          |
+| ---------- | ---------------- | --------------------- |
+| Processing | Bit by bit       | Block (e.g., 128-bit) |
+| Speed      | Fast             | Slower                |
+| Usage      | Embedded systems | Internet security     |
+
+---
+
+## 🔹 2. Encryption & Decryption
+
+تعتمد على عملية XOR:
+
+```text
+Encryption:  yi = xi ⊕ si
+Decryption:  xi = yi ⊕ si
+```
+
+* `x` = plaintext
+* `y` = ciphertext
+* `s` = keystream
+
+### 💡 ملاحظة:
+
+✔️ نفس العملية للتشفير وفك التشفير
+
+---
+
+## 🔹 3. Why XOR?
+
+* سهلة وسريعة
+* قابلة للعكس بنفس العملية
+* تعطي توزيع عشوائي جيد
+
+---
+
+## 🔹 4. Types of Stream Ciphers
+
+### 🔸 Synchronous
+
+* يعتمد فقط على المفتاح و IV
+* لا يعتمد على ciphertext
+
+### 🔸 Asynchronous (Self-Synchronizing)
+
+* يعتمد على ciphertext
+* يعيد التزامن تلقائيًا
+
+---
+
+## 🔹 5. Random Number Generators (RNG)
+
+### 🎲 Types:
+
+#### ✅ True Random Generator (TRNG)
+
+* يعتمد على ظواهر فيزيائية
+* غير قابل للتنبؤ
+* غير قابل لإعادة الإنتاج
+
+#### ⚠️ Pseudorandom Generator (PRNG)
+
+* يعتمد على Seed
+* قابل للتكرار
+* **غير آمن للتشفير غالبًا**
+
+---
+
+## 🔐 6. Cryptographically Secure PRNG (CSPRNG)
+
+* نوع خاص من PRNG
+* يجب أن يكون:
+
+  * غير قابل للتنبؤ
+  * آمن ضد التحليل
+
+📌 يستخدم في:
+
+* Stream Ciphers
+* Key Generation
+
+---
+
+## 🔒 7. One-Time Pad (OTP)
+
+### 📌 الفكرة:
+
+```text
+Ciphertext = Plaintext ⊕ Key
+```
+
+### ✅ المميزات:
+
+* غير قابل للكسر (Perfect Security)
+* عشوائية كاملة
+
+### ❌ العيوب:
+
+* المفتاح = طول الرسالة
+* صعب التوزيع
+
+---
+
+## 🔁 8. Linear Feedback Shift Registers (LFSRs)
+
+### 📌 الفكرة:
+
+* Register + Feedback باستخدام XOR
+* يولد keystream
+
+### ⚙️ الخصائص:
+
+* Output دوري
+* أقصى طول:
+
+```text
+2^m - 1
+```
+
+---
+
+## 🔢 9. Mathematical Representation
+
+```text
+si+m = si+k ⊕ si
+```
+
+أو باستخدام Polynomial:
+
+```text
+P(x) = x^m + p1x^(m-1) + ... + p0
+```
+
+---
+
+## ⚠️ 10. Security of LFSR
+
+### ❌ المشكلة:
+
+* يمكن التنبؤ بالمخرجات
+* يمكن كسره بسهولة إذا عُرف عدد كافٍ من البتات
+
+### ✅ الحل:
+
+* دمج عدة LFSRs
+
+---
+
+## 🔥 11. Lessons Learned
+
+* Stream ciphers أسرع من block ciphers
+* مناسبة للأجهزة الضعيفة (IoT, Mobile)
+* تحتاج RNG قوي جدًا
+* OTP آمن تمامًا لكنه غير عملي
+* LFSR وحده غير آمن
+
+---
+
+## ⚔️ 12. Attack vs Defense
+
+| Component | Weakness         | Solution               |
+| --------- | ---------------- | ---------------------- |
+| PRNG      | Predictable      | Use CSPRNG             |
+| OTP       | Key distribution | Secure channels        |
+| LFSR      | Linear           | Combine multiple LFSRs |
+
+---
+
+## 🔐 13. Why Important in Cybersecurity?
+
+Stream ciphers تُستخدم في:
+
+* Wireless security
+* Embedded systems
+* Real-time encryption
+
+---
+
+
 ## 📌 Summary
 
 في هذا الفصل تعلمت:
 
-* أساسيات التشفير
+
+
+* Stream Ciphers vs Block Ciphers
+* XOR Encryption
+* RNG / PRNG / CSPRNG
+* One-Time Pad
+* LFSR
+
+💡 هذا الجزء مهم لفهم:
+
+* RC4
+* Modern Stream Ciphers
+* Secure Key Generation
+
+---
+
+*  أساسيات التشفير
 * أنواع الأنظمة (Substitution / Transposition)
 * طرق الهجوم (Brute Force / Cryptanalysis)
 * أشهر الخوارزميات الكلاسيكية
