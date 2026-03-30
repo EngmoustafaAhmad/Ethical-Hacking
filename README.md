@@ -1,8 +1,4 @@
-# Ethical-Hacking
-A comprehensive collection of ethical hacking notes, lab exercises, and cybersecurity concepts including attack techniques, defense strategies, and hands-on practice using Kali Linux.
-
-## Ethical-Hacking-Labs/
-
+Ethical-Hacking-Labs/
 │
 
 ├── README.md
@@ -11,67 +7,96 @@ A comprehensive collection of ethical hacking notes, lab exercises, and cybersec
 
 │
 
-├── notes/
+├── fundamentals/   🔹 (جديد)
 
-│   ├── lec01-intro.md
+│ ├── networking-basics.md
 
-│   ├── lec02-networking.md
+│ ├── osi-model.md
 
-│   ├── lec03-footprinting.md
+│ ├── tcp-ip.md
 
-│   └── ...
-
-│
-
-├── labs/
-
-│   ├── lab01-footprinting/
-
-│   │   ├── README.md
-
-│   │   ├── steps.md
-
-│   │   ├── screenshots/
-
-│   │   └── results.md
-
-│   │
-
-│   ├── lab02-scanning/
-
-│   └── ...
+│ └── protocols.md
 
 │
 
-├── tools/
+├── network-security/   🔹 (جديد)
 
-│   ├── nmap/
+│ ├── lec01-intro.md
 
-│   │   ├── commands.md
+│ ├── lec02-threats-attacks.md
 
-│   │   └── examples.md
+│ ├── lec03-cryptography.md
 
-│   │
+│ ├── lec04-firewalls-ids.md
 
-│   ├── wireshark/
+│ ├── lec05-vpn.md
 
-│   ├── metasploit/
+│ ├── lec06-wireless-security.md
 
-│   └── ...
+│ └── lec07-web-security.md
+
+│
+
+├── ethical-hacking/
+
+│ ├── notes/
+
+│ │ ├── lec01-intro.md
+
+│ │ ├── lec02-networking.md
+
+│ │ ├── lec03-footprinting.md
+
+│ │ └── ...
+
+│ │
+
+│ ├── labs/
+
+│ │ ├── lab01-footprinting/
+
+│ │ ├── lab02-scanning/
+
+│ │ └── ...
+
+│ │
+
+│ ├── tools/
+
+│ │ ├── nmap/
+
+│ │ ├── wireshark/
+
+│ │ ├── metasploit/
+
+│ │ └── ...
+
+│
+
+├── defense-labs/   🔹 (جديد مهم جدا)
+
+│ ├── lab01-firewall-config/
+
+│ ├── lab02-ids-setup/
+
+│ ├── lab03-secure-network/
+
+│ └── ...
 
 │
 
 ├── resources/
 
-│   ├── books.md
+│ ├── books.md
 
-│   ├── courses.md
+│ ├── courses.md
 
-│   └── websites.md
+│ └── websites.md
 
 │
 
 └── reports/
 
     ├── lab-reports/
+    
     └── vulnerabilities/
