@@ -38,7 +38,7 @@ Confusion and Diffusion
 
 DES is based on two important cryptography principles introduced by Claude Shannon.
 
-1. Confusion
+## 1. Confusion
 
 Makes the relationship between:
 
@@ -51,7 +51,7 @@ difficult to understand.
 DES achieves confusion using:
 
 S-Boxes
-2. Diffusion
+## 2. Diffusion
 
 Spreads the effect of one plaintext bit across many ciphertext bits.
 
